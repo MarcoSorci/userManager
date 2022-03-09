@@ -1,8 +1,13 @@
-<div class="container" *ngIf="user">
+<!-- <div class="container" *ngIf="user">
     <span>{{user.name}}</span>
     <span>{{user.username}}</span>
     <span>{{user.email}}</span>
     <span>{{user.phone}}</span>
     <span>{{user.website}}</span>
     <app-address-card [address]="user.address"></app-address-card>
-</div>
+</div> -->
+
+<a class="container" *ngIf="user" href="./user/{{user.id}}">
+    <span>{{user.name}}</span>
+    <span>{{user.username}}</span>
+</a>

@@ -1,5 +1,12 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     margin: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border: 2px solid #DDDD;
+    width: 15%;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
 }

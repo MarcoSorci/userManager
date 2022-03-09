@@ -1,0 +1,59 @@
+<div class="user-card-container" *ngIf="singleUser">
+    <div class="user-main-info">
+        <div class="user-image">
+            <img src="./assets/images/user.png" alt="user icon">
+        </div>
+        <div class="user-name">
+            <span class="name-bold">{{singleUser.name}}</span>
+            <span class="surname-italic">{{singleUser.username}}</span>
+        </div>
+    </div>
+    <div class="user-data">
+        <div class="user-contacts">
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/phone.svg" alt="phone icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{singleUser.phone}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/mail.svg" alt="mail icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{singleUser.email}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/website.svg" alt="website icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{singleUser.website}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/address.svg" alt="address icon">
+                </div>
+                <div class="user-contact-detail">
+                    <app-address-card [address]="singleUser.address"></app-address-card> 
+                </div>
+            </div>
+        </div>
+        <div class="user-company">
+            <app-company [comp]="singleUser.company"></app-company>
+        </div>
+    </div>
+</div>
+
+<button class="load-posts-button" (click)="loadPosts()">
+    Load Posts
+</button>
+
+<div *ngIf="postList" class="posts-container">
+    <!-- <p *ngFor="let post of postList">{{post.title}}</p> -->
+    <app-single-post *ngFor="let post of postList" [post]="post"></app-single-post>
+</div>

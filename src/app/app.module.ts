@@ -6,16 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersPageComponent } from './components/users-page/users-page.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddressCardComponent } from './components/address-card/address-card.component';
+import { SingleUserPageComponent } from './components/single-user-page/single-user-page.component';
+import { CompanyComponent } from './components/company/company.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersPageComponent,
     UserDetailComponent,
-    PageNotFoundComponent,
     AddressCardComponent,
+    SingleUserPageComponent,
+    CompanyComponent,
+    SinglePostComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
